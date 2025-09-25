@@ -14,22 +14,22 @@
 
 
 <body>
-    <div th:replace="fragments/navbar :: navbar('')"></div>
+    <div th:replace="fragments/navbar :: navbar('List of Movies')"></div>
 
     <div class="container mt-4">
         <h2>Best Movies</h2>
         <a th:href="@{/home}" class="btn btn-primary mb-3">Torna alla Home</a>
         <ul class="list-group">
 
-            <li th:each="title : ${movies}">
-                <a th:href="@{movies/{id}(id=${title.id})}" class="list-group-item"></a>
+            <li th:each="movie : ${movies}">
+                <a th:href="@{movies/{id}(id=${movie.id})}" th:text="${movie.title}" class="list-group-item"></a>
             </li>
         </ul>
-        <p th:text="${titles}">Titoli dei film</p>
-
-
+        
+        
     </div>
     <!-- <h1>Lista dei migliori film</h1> -->
+    <!-- <p th:text="${titles}">Titoli dei film</p> -->
 
 
 </body>

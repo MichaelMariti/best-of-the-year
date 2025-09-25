@@ -57,6 +57,7 @@ public class HomeController {
             }
         }
         model.addAttribute("titles", titles);
+        model.addAttribute("movies", movies);
         return "movies";
     }
 
@@ -74,6 +75,7 @@ public class HomeController {
         }
 
         model.addAttribute("titles", titles);
+        model.addAttribute("songs", songs);
         return "songs";
     }
     
