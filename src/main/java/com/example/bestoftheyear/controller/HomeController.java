@@ -107,4 +107,21 @@ public class HomeController {
         return "song-detail";
     }
 
+    // Metodi privati per ottenere le liste di oggetti
+    private List<Movie> listBestMovies() {
+        return List.of(
+            new Movie((int) 1L, "The Shawshank Redemption"),
+            new Movie((int) 2L, "The Godfather"),
+            new Movie((int) 3L, "The Dark Knight")
+        );
+    }
+
+    private List<Song> listBestSongs() {
+        return List.of(
+            new Song((int) 1L, "Bohemian Rhapsody"),
+            new Song((int) 2L, "Stairway to Heaven"),
+            new Song((int) 3L, "Hotel California")
+        );
+    }
+
 }

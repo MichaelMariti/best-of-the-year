@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+
+<body>
+    <div th:fragment="navbar('current')">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">            
+            <div class="ml-auto">
+                <a class="btn btn-primary mr-2" th:href="@{/home}">Home</a>
+                <a class="btn btn-secondary mr-2" th:href="@{/movies}">Movies</a>
+                <a class="btn btn-primary" th:href="@{/songs}">Songs</a>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>
